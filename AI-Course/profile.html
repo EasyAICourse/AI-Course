@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Set your AI learning goals with Easy AI Course. Define your earnings target and start freelancing!">
+    <meta name="keywords" content="AI course goals, learn AI for beginners, AI freelancing">
+    <title>Set Your Goals - Easy AI Course</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <div class="earnings-tracker">
+        <p id="earnings-goal">Set Your Earnings Goal!</p>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">Easy AI Course</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beginner.html">Beginner Course</a></li>
+                <li><a href="intermediate.html">Intermediate Course</a></li>
+                <li><a href="community.html">Hustle Hub</a></li>
+                <li><a href="profile.html" class="cta">Set Goals</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="profile-form">
+            <h1>Your AI Journey Starts Here</h1>
+            <p>Tell us about yourself to personalize your learning and set your earnings goal!</p>
+            <form id="profile-form">
+                <label>Age:
+                    <input type="number" name="age" min="13" max="100" required>
+                </label>
+                <label>Aspirations (e.g., career goals):
+                    <textarea name="aspirations" required></textarea>
+                </label>
+                <label>Why do you want to learn AI?:
+                    <select name="reason" required>
+                        <option value="freelancing">To freelance and earn money</option>
+                        <option value="career">To start an AI career</option>
+                        <option value="curiosity">Out of curiosity</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <label>Desired Monthly Income ($):
+                    <input type="number" name="income" min="100" required>
+                </label>
+                <button type="submit" class="cta">Create Profile</button>
+            </form>
+            <div id="profile-display" class="hidden">
+                <h2>Your Profile</h2>
+                <p><strong>Age:</strong> <span id="profile-age"></span></p>
+                <p><strong>Aspirations:</strong> <span id="profile-aspirations"></span></p>
+                <p><strong>Reason:</strong> <span id="profile-reason"></span></p>
+                <p><strong>Goal:</strong> Earn $<span id="profile-income"></span>/month</p>
+                <a href="beginner.html" class="btn">Start Beginner Course</a>
+                <a href="intermediate.html" class="btn">Start Intermediate Course</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Easy AI Course. All rights reserved.</p>
+        <a href="privacy.html">Privacy Policy</a> | <a href="mailto:support@easyaicourse.com">Contact</a>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f4f9;
+    color: #333;
+}
+
+.earnings-tracker {
+    background: #1e90ff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+.earnings-tracker p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    background: #ddd;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.progress-fill {
+    background: #ffd700;
+    height: 100%;
+    color: #333;
+    text-align: center;
+    line-height: 20px;
+    transition: width 1s ease;
+}
+
+header {
+    background: #1e90ff;
+    padding: 1rem;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+nav a.cta {
+    background: #ffd700;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.hero, .course-hero, .community-hero, .checkout, .profile-form, .privacy {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #1e90ff, #87cefa);
+    color: white;
+}
+
+.hero h1, .course-hero h1, .community-hero h1, .checkout h1, .profile-form h1, .privacy h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero p, .course-hero p, .community-hero p, .checkout p, .profile-form p, .privacy p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 2rem;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.cta, .btn, .share-btn, .quiz-btn {
+    background: #ffd700;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    transition: background 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta:hover, .btn:hover, .share-btn:hover, .quiz-btn:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
+
+.courses, .modules, .testimonials, .guide, .challenges, .profile-form {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.course-card, .module, #profile-display {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.course-card:hover, .module:hover {
+    transform: translateY(-10px);
+}
+
+.course-card h3, .module h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.course-card .badge {
+    max-width: 150px;
+    margin: 1rem auto;
+}
+
+.quiz {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f4f4f9;
+    border-radius: 10px;
+}
+
+.quiz-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quiz-form p {
+    font-weight: 600;
+}
+
+.quiz-form label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quiz-result {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.payment-prompt {
+    margin-top: 1rem;
+}
+
+.testimonials .testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonial-slider p {
+    flex: 0 0 100%;
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 1rem;
+    animation: slide 15s infinite;
+}
+
+@keyframes slide {
+    0%, 33% { transform: translateX(0); }
+    34%, 66% { transform: translateX(-100%); }
+    67%, 100% { transform: translateX(-200%); }
+}
+
+.fomo-timer {
+    font-size: 1.4rem;
+    color: #ffd700;
+    margin: 1rem 0;
+    animation: pulse 2s infinite;
+}
+
+#checkout-form, #profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#profile-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#profile-form input, #profile-form textarea, #profile-form select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#profile-display {
+    margin-top: 2rem;
+}
+
+.confetti {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.social-share {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.share-btn {
+    background: #ff69b4;
+}
+
+.share-btn:hover {
+    background: #ff4f9a;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer a {
+    color: #ffd700;
+    margin: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .hero h1, .course-hero h1, .community-hero h1, .checkout h1, .profile-form h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
