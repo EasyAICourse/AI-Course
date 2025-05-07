@@ -98,15 +98,19 @@ document.getElementById('checkout-form')?.addEventListener('submit', (e) => {
     const confetti = document.querySelector('.confetti');
     confetti.classList.remove('hidden');
     setTimeout(() => confetti.classList.add('hidden'), 3000);
+
+    const course = document.querySelector('input[name="course"]:checked')?.value;
     const guide = document.querySelector('input[name="guide"]:checked')?.value;
-    if (guide) {
-        const profile = JSON.parse(localStorage.getItem('profile')) || {};
-        profile.progress = 100; // 100% with guide
-        localStorage.setItem('profile', JSON.stringify(profile));
-        loadProfile();
+
+    if (course === 'beginner') {
+        window.location.href = 'https://buy.stripe.com/beginner-link';
+    } else if (course === 'intermediate') {
+        window.location.href = 'https://buy.stripe.com/intermediate-link';
+    } else if (guide === 'beginner-guide') {
+        window.location.href = 'https://gumroad.com/beginner-guide-link';
+    } else if (guide === 'intermediate-guide') {
+        window.location.href = 'https://gumroad.com/intermediate-guide-link';
     }
-    alert('Redirecting to payment... (Mock integration)');
-    // Replace with Stripe/Gumroad links
 });
 
 // Social Sharing
